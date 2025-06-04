@@ -31,9 +31,4 @@ def print_morse_code(sentence):
             morse_translation += char
         
     print(morse_translation)
-
-    # for letter in sentence:
-    #     if letter.upper() in key
-    #     print(letter.upper())
-
-print_morse_code(alpha_numeric_sentence)
+    return morse_translation
