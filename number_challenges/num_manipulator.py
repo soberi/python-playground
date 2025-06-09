@@ -43,15 +43,25 @@ class NumManipulator:
 
     
     #   Reverse an integer.
-    def reverse_integer(self):
-        pass
+    def reverse_integer(self, number):
+        reversed_number = str(number)[::-1]
+        return int(reversed_number)
 
 
     #   Print the Fibonacci series using the recursive method.
-    def fibonacci_series(self):
-        pass
+    def fibonacci_series(self, places=11):
+        
+        # Initial sequence
+        sequence = [0, 1]
 
+        while places > 0:
+            next_int = sequence[-1] + sequence[-2]
+            sequence.append(next_int)
+            places -= 1
+
+        return sequence
     
+
     #   Return the Nth value from the Fibonacci sequence.
     def find_fibonacci(self):
         pass
