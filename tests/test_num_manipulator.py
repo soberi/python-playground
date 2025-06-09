@@ -18,5 +18,25 @@ def test_reverse_number():
 
 
 def test_print_fibonacci():
-    target_sequence = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+    target_sequence = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
     assert manipulator.fibonacci_series() == target_sequence
+
+
+def test_find_fibonacci():
+    position = 10
+    fibonacci_num = 34
+
+    assert manipulator.find_fibonacci(position) == fibonacci_num
+
+
+def test_find_average():
+    series = [1, 2, 3, 4, 5]
+    average = 3
+
+    assert manipulator.find_average(series) == average
+
+def test_celsius_to_fahrenheit():
+    celsius = 28
+    fahrenheit = 82.4
+
+    assert manipulator.celsius_to_fahrenheit(celsius) == fahrenheit

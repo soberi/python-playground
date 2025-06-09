@@ -54,6 +54,9 @@ class NumManipulator:
         # Initial sequence
         sequence = [0, 1]
 
+        # Accounting for the initial sequence.
+        places = places - 2
+
         while places > 0:
             next_int = sequence[-1] + sequence[-2]
             sequence.append(next_int)
@@ -63,15 +66,28 @@ class NumManipulator:
     
 
     #   Return the Nth value from the Fibonacci sequence.
-    def find_fibonacci(self):
-        pass
+    def find_fibonacci(self, position):
+        # Initial sequence
+        sequence = [0, 1]
+
+        # Accounting for the initial sequence.
+        position = position - 2
+
+        while position > 0:
+            next_int = sequence[-1] + sequence[-2]
+            sequence.append(next_int)
+            position -= 1
+
+        return sequence[-1]
 
 
     #   Find the average of numbers (with explanations).
-    def find_average(self):
-        pass
+    def find_average(self, number_series):
+        average = sum(number_series) / len(number_series)
+        return average
 
 
     #   Convert Celsius to Fahrenheit.
-    def celsius_t0_fahrenheit(self):
-        pass
+    def celsius_to_fahrenheit(self, celsius):
+        fahrenheit = (celsius * 1.8) + 32
+        return fahrenheit
